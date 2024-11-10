@@ -16,18 +16,33 @@ const Contact = () => {
     };
 
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
 
-        emailjs.send('service_pwd8qkr')
+        try {
+            await emailjs.send('service_pwd8qkr',
+                'template_j63ualg',
+                {from_name:form.name,
+                    to_name: 'Peace',
+                    from_email: form.email,
+                    to_email: 'peacekimathi104@gmail.com',
+                    message: form.message
+                },
+                '9uelDcGzoMdDWTnF0'
+                );
 
-        // Simulate form submission
-        setTimeout(() => {
-            alert("Message sent successfully!");
             setLoading(false);
-            setForm({ name: "", email: "", message: "" });
-        }, 2000);
+            alert('Your message has been sent!');
+
+        } catch (error) {
+            setLoading(false);
+
+            console.error(error);
+
+            alert('Something went wrong!')
+
+        }
     };
 
     return (
