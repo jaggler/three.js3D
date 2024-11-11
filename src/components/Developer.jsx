@@ -14,9 +14,14 @@ const Developer = ({ animationName = 'clapping', ...props }) => {
     saluteAnimation[0].name = 'salute';
     victoryAnimation[0].name = 'victory';
 
-    // Combine animations into a single array
-    const allAnimations = [...clappingAnimation, ...saluteAnimation, ...victoryAnimation];
-    const { actions } = useAnimations(allAnimations, group);
+    // Combine all animations into a single array
+    const combinedAnimations = [
+        clappingAnimation[0],
+        saluteAnimation[0],
+        victoryAnimation[0]
+    ];
+
+    const { actions } = useAnimations(combinedAnimations, group);
 
     useEffect(() => {
         if (actions[animationName]) {

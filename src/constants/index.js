@@ -260,19 +260,22 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 export const workExperiences = [
     {
         id: 1,
-        name: 'Framer',
-        pos: 'Lead Web Developer',
-        duration: '2022 - Present',
-        title: "Framer serves as my go-to tool for creating interactive prototypes. I use it to bring designs to  life, allowing stakeholders to experience the user flow and interactions before development.",
+        name: 'Macho Sacco',
+        pos: 'Management Intern',
+        duration: 'Sep 2023 - Dec 2023',
+        title: "Financial Data Analysis: Assisted in collecting and analyzing financial data to support decision-making processes\n" +
+            "within the organization. Utilized Excel and financial software to create reports and presentations for senior\n" +
+            "management.",
         icon: '/assets/framer.svg',
         animation: 'victory',
     },
     {
         id: 2,
-        name: 'Figma',
-        pos: 'Web Developer',
-        duration: '2020 - 2022',
-        title: "Figma is my collaborative design platform of choice. I utilize it to work seamlessly with team members and clients, facilitating real-time feedback and design iterations. Its cloud-based.",
+        name: 'Pewiki Company Limited',
+        pos: 'Data Analyst',
+        duration: 'Jan 2021 - Present',
+        title: "Analyzed monthly sales reports to identify trends and patterns, resulting in the creation of actionable insights and\n" +
+            "recommendations for sales team improvements, leading to a 10% increase in monthly revenue",
         icon: '/assets/figma.svg',
         animation: 'clapping',
     },
